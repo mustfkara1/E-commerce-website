@@ -1,0 +1,11 @@
+{% load static %}
+
+
+<div class="card mb-2">
+    <img src="{% static 'img/'|add:ürün.resim %}" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">{{ ürün.ürün_adı }}</h5>
+      <p class="card-text">{{ ürün.aciklama }}</p>
+      <a href="{% url 'details' ürün.id %}" class="btn btn-dark">detay</a>
+    </div>
+  </div>
